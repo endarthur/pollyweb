@@ -41,7 +41,7 @@ bqplot
 matplotlib
 
 #pollywog
-lf_pollywog
+# lf_pollywog
 
 # Python: data manipulation libraries (optional)
 pandas
