@@ -7,15 +7,10 @@ notebook~=7.4.5
 # Python kernel (optional)
 jupyterlite-pyodide-kernel==0.6.1
 
-# JavaScript kernel (optional)
-jupyterlite-javascript-kernel==0.3.0
-
 # Language support (optional)
 jupyterlab-language-pack-fr-FR
 jupyterlab-language-pack-zh-CN
-
-# P5 kernel (optional)
-jupyterlite-p5-kernel==0.1.0
+jupyterlab-language-pack-pt-BR
 
 # JupyterLab: Fasta file renderer (optional)
 jupyterlab-fasta>=3.3.0,<4
@@ -43,3 +38,15 @@ ipyleaflet
 # Python: plotting libraries (optional)
 plotly>=6,<7
 bqplot
+matplotlib
+
+#pollywog
+lf_pollywog
+
+# Python: data manipulation libraries (optional)
+pandas
+
+# Python: scientific computing libraries (optional)
+scipy
+numpy
+scikit-learn
