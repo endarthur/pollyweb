@@ -1,0 +1,2 @@
+# This directory will contain wheel files for JupyterLite deployment
+# Wheels are downloaded during the GitHub Actions build process
