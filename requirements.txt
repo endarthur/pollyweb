@@ -40,8 +40,8 @@ plotly>=6,<7
 bqplot
 matplotlib
 
-#pollywog
-lf_pollywog==v0.2.0
+# pollywog (note: not needed for runtime, only for local development)
+# lf_pollywog==0.2.1
 
 # Python: data manipulation libraries (optional)
 pandas

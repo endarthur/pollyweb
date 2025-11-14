@@ -23,12 +23,27 @@ This JupyterLite deployment lets you:
 ## Getting Started
 1. Open the JupyterLite interface (see deployment instructions or launch link)
 2. Browse the `content/examples/` folder for ready-to-run notebooks:
+	- `quickstart.ipynb`: Quick introduction with installation
 	- `basic_usage.ipynb`: Getting started with Pollywog
 	- `display_final_workflow.ipynb`: End-to-end workflow example
 	- `sklearn_conversion.ipynb`: Integrate scikit-learn models
 	- `querying_calcsets.ipynb`: Advanced querying
 	- ...and more
-3. Create your own notebooks to automate `.lfcalc` workflows
+3. **Install Pollywog in your notebook** (required for JupyterLite):
+   ```python
+   # Install pollywog in JupyterLite (skip in regular Jupyter)
+   import sys
+
+   if 'pyodide' in sys.modules:
+       # Running in JupyterLite/Pyodide - install from bundled wheel
+       import micropip
+       await micropip.install('lf_pollywog')
+       print("✓ Installed pollywog from bundled wheel")
+   else:
+       # Running in regular Jupyter - assume already installed
+       print("✓ Using system-installed pollywog")
+   ```
+4. Create your own notebooks to automate `.lfcalc` workflows
 
 ## Example: Reading and Writing `.lfcalc` Files
 ```python
