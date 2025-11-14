@@ -23,11 +23,12 @@ jobs:
           python -m pip install -r requirements.txt
       - name: Download wheels for JupyterLite
         run: |
-          pip download --no-deps --dest pypi lf_pollywog==0.2.1
+          mkdir -p wheels
+          pip download --no-deps --dest wheels lf_pollywog==0.2.1
       - name: Build the JupyterLite site
         run: |
           cp README.md content
-          jupyter lite build --contents content --output-dir dist --piplite-wheels pypi/lf_pollywog-0.2.1-py3-none-any.whl
+          jupyter lite build --contents content --output-dir dist --piplite-wheels wheels/lf_pollywog-0.2.1-py3-none-any.whl
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
